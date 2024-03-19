@@ -1,0 +1,55 @@
+title: Alacritty
+
+colors:
+  bright:
+    black: '#646B8A'
+    #black: '#282a40'
+    blue: '#a3c5ff'
+    cyan: '#98fffd'
+    green: '#e0ffad'
+    magenta: '#d6afed'
+    red: '#eb7f84'
+    white: '#d1e5ed'
+    yellow: '#ffee7e'
+  normal:
+    black: '#646B8A'
+    #black: '#181a29'
+    blue: '#93bbff'
+    cyan: '#98e4ff'
+    green: '#73daca'
+    #green: '#cdea9f'
+    magenta: '#d3a7ee'
+    red: '#F07178'
+    white: '#bfd5de'
+    yellow: '#F9B161'
+    #yellow: '#ffd47e'
+  primary:
+   #Based On Kitty
+   foreground: '#a9b1d6'
+   background: '#2c2c2c'
+   #background: '#212121'
+   #foreground: '#c5c9de'
+font:
+  size : 16
+  normal:
+    family: Monofur Nerd Font Mono
+    style: Regular
+  bold:
+    family: Monofur Nerd Font Mono
+  italic:
+    family: Monofur Nerd Font Mono
+  offset:
+    x: 0
+    y: 0 
+    size: 20.0
+window:
+  opacity: 0.81
+  padding:
+    x: 14
+    y: 14
+
+cursor:
+  style: 
+    shape: Beam
+    blinking: On
+  blink_interval: 500

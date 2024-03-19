@@ -1,0 +1,57 @@
+#title = "Alacritty"
+
+[colors.bright]
+black = "#646B8A"
+blue = "#a3c5ff"
+cyan = "#98fffd"
+green = "#e0ffad"
+magenta = "#d6afed"
+red = "#eb7f84"
+white = "#d1e5ed"
+yellow = "#ffee7e"
+
+[colors.normal]
+black = "#646B8A"
+blue = "#93bbff"
+cyan = "#98e4ff"
+green = "#73daca"
+magenta = "#d3a7ee"
+red = "#F07178"
+white = "#bfd5de"
+yellow = "#F9B161"
+
+[colors.primary]
+background = "#2c2c2c"
+foreground = "#a9b1d6"
+
+[cursor]
+blink_interval = 500
+
+[cursor.style]
+blinking = "On"
+shape = "Beam"
+
+[font]
+size = 16
+
+[font.bold]
+family = "Monofur Nerd Font Mono"
+
+[font.italic]
+family = "Monofur Nerd Font Mono"
+
+[font.normal]
+family = "Monofur Nerd Font Mono"
+style = "Regular"
+
+[font.offset]
+#size = 20.0
+x = 0
+y = 0
+
+[window]
+opacity = 0.81
+
+[window.padding]
+x = 14
+y = 14
