@@ -132,7 +132,8 @@ function rmk(){
 typeset -A ZSH_HIGHLIGHT_STYLES
 ZSH_HIGHLIGHT_STYLES[unknown-token]='fg=red'
 
-nitch
+# Fetch (Use Nitch)
+#nitch
 #neofetch 
 #pfetch
 
