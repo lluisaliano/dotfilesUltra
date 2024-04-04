@@ -131,11 +131,11 @@
     "pulseaudio": {
         "format": "{icon} {volume}%",
         "format-bluetooth": "  {volume}%",
-        "format-bluetooth-muted": "婢 ",
-        "format-muted": "婢",
+        "format-bluetooth-muted": "󰟎 ",
+        "format-muted": "󰝟",
         "format-icons": {
             "headphone": "",
-            "hands-free": "",
+            "hands-free": "",
             "headset": "",
             "phone": "",
             "portable": "",
