@@ -1,4 +1,3 @@
-
 # ZSH Config
 
 # path
