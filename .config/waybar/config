@@ -192,7 +192,7 @@
     
     "mpris": {
         "format": "{player_icon}  {title}",
-        "title-len": 18,
+        "title-len": 14,
         "ellipsis" : "…",
         "player-icons": {
             "default": "▶",
