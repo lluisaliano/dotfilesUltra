@@ -131,8 +131,19 @@ function rmk(){
 typeset -A ZSH_HIGHLIGHT_STYLES
 ZSH_HIGHLIGHT_STYLES[unknown-token]='fg=red'
 
+# Node package Manager
+eval "$(fnm env --use-on-cd)"
+
 # Fetch (Use Nitch)
 #nitch
 #neofetch 
 #pfetch
 
+
+# pnpm
+export PNPM_HOME="/home/lluis/.local/share/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end
