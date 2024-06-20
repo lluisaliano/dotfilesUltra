@@ -78,6 +78,8 @@ alias luxorpi='clear && ssh -l dietpi pi.hole'
 alias minipc='clear && ssh -l lluis 192.168.1.44'
 # Faster terminal by not loading anaconda if it is not used
 alias anaconda='source  ~/.conda.zshrc'
+# VPS
+alias luxorvps='ssh -i .ssh/ssh-key-2024-06-19.key lluis@143.47.48.228'
 
 # Plugins
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
