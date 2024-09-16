@@ -76,6 +76,7 @@ alias icat='kitty +kitten icat'
 alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 alias luxorpi='clear && ssh -l dietpi pi.hole'
 alias minipc='clear && ssh -l lluis 192.168.1.44'
+alias image='eog'
 # Faster terminal by not loading anaconda if it is not used
 alias anaconda='source  ~/.conda.zshrc'
 # VPS
