@@ -43,10 +43,12 @@ font:
     y: 0 
     size: 20.0
 window:
-  opacity: 0.81
+  #opacity: 0.81
+  opacity: 0
   padding:
     x: 14
     y: 14
+  dynamic_padding: true
 
 cursor:
   style: 

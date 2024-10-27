@@ -21,7 +21,7 @@ host=`hostname`
 # Options
 shutdown='󱎃 '
 reboot=' '
-lock='󰍀'
+lock='󰍀 '
 suspend=' '
 logout='󰿅 '
 yes=' '
@@ -87,7 +87,7 @@ case ${chosen} in
 		systemctl reboot
         ;;
     $lock)
-		hyprlock -f
+		hyprlock
         ;;
     $suspend)
 		systemctl suspend

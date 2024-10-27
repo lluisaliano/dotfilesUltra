@@ -134,6 +134,8 @@ function rmk(){
 typeset -A ZSH_HIGHLIGHT_STYLES
 ZSH_HIGHLIGHT_STYLES[unknown-token]='fg=red'
 
+eval "$(zoxide init zsh)"
+
 # Node package Manager
 eval "$(fnm env --use-on-cd)"
 
