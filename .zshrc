@@ -136,14 +136,10 @@ ZSH_HIGHLIGHT_STYLES[unknown-token]='fg=red'
 
 eval "$(zoxide init zsh)"
 
-# Node package Manager
-eval "$(fnm env --use-on-cd)"
-
 # Fetch (Use Nitch)
 #nitch
 #neofetch 
 #pfetch
-
 
 # pnpm
 export PNPM_HOME="/home/lluis/.local/share/pnpm"
@@ -152,5 +148,3 @@ case ":$PATH:" in
   *) export PATH="$PNPM_HOME:$PATH" ;;
 esac
 # pnpm end
-
-PATH=~/.console-ninja/.bin:$PATH
