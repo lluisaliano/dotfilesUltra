@@ -19,5 +19,4 @@ This repository contains my personal dotfiles. They are set up with various tool
 Please note that the files are not correctly ordered and some things should be deleted.
 
 ## Preview
-![Preview](https://github.com/lluisaliano/Dotfiles/assets/21333617/382e0640-783e-4871-b67b-61e72957c881)
-
+![Preview](https://github.com/user-attachments/assets/0e03f4ad-51f0-441a-a2e5-4bfb2f8cb41b)
