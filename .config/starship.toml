@@ -57,7 +57,7 @@ time_format = "%T"
 [username]
 style_user = "blue"
 style_root = "purple"
-format = "[lluis]($style) 15-12-2024 "
+format = "[lluis]($style) "
 disabled = false
 show_always = true
 
