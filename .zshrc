@@ -149,3 +149,5 @@ case ":$PATH:" in
 esac
 # pnpm end
 
+#VCPKG ROOT ENV VARIABLE
+export VCPKG_ROOT=~/vcpkg  
