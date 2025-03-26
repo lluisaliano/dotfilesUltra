@@ -71,7 +71,7 @@
     "spotify-client",
     "Pasarela de vídeo Xwayland_pipewireToXProxy"
   ],
-  "bar.customModules.cpuTemp.sensor": "/sys/devices/platform/coretemp.0/hwmon/hwmon8/temp1_input",
+  "bar.customModules.cpuTemp.sensor": "/sys/class/thermal/thermal_zone9/temp",
   "bar.customModules.storage.pollingInterval": 100,
   "bar.customModules.storage.labelType": "free",
   "bar.customModules.power.icon": "󰣇",
@@ -244,5 +244,22 @@
   "theme.osd.border.color": "#ffffff",
   "theme.osd.bar_color": "#ffffff",
   "theme.osd.icon_container": "#ffffff",
-  "theme.osd.label": "#ffffff"
+  "theme.osd.label": "#ffffff",
+  "theme.bar.menus.menu.clock.time.time": "#ffffff",
+  "theme.bar.menus.menu.clock.time.timeperiod": "#ffffff",
+  "theme.bar.menus.menu.clock.calendar.yearmonth": "#ffffff",
+  "theme.bar.menus.menu.clock.calendar.weekdays": "#ffffff",
+  "theme.bar.menus.menu.clock.calendar.paginator": "#ffffff",
+  "theme.bar.menus.menu.clock.calendar.currentday": "#ffffff",
+  "theme.bar.menus.menu.clock.weather.icon": "#ffffff",
+  "theme.bar.menus.menu.clock.weather.hourly.time": "#ffffff",
+  "theme.bar.menus.menu.clock.weather.hourly.icon": "#ffffff",
+  "theme.bar.menus.menu.clock.weather.hourly.temperature": "#ffffff",
+  "theme.bar.menus.menu.clock.weather.stats": "#ffffff",
+  "theme.bar.menus.menu.clock.weather.thermometer.extremelyhot": "#ffffff",
+  "theme.bar.menus.menu.bluetooth.background.color": "#000000",
+  "theme.bar.menus.menu.clock.background.color": "#000000",
+  "theme.notification.background": "#181826",
+  "theme.bar.menus.menu.notifications.background": "#000000",
+  "theme.bar.menus.menu.network.background.color": "#000000"
 }
