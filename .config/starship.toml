@@ -67,3 +67,7 @@ read_only = "  "
 style = "cyan"
 truncation_length = 2
 truncation_symbol = "./"
+
+[os]
+disabled=true
+
