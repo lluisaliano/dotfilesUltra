@@ -261,5 +261,13 @@
   "theme.bar.menus.menu.clock.background.color": "#000000",
   "theme.notification.background": "#181826",
   "theme.bar.menus.menu.notifications.background": "#000000",
-  "theme.bar.menus.menu.network.background.color": "#000000"
+  "theme.bar.menus.menu.network.background.color": "#000000",
+  "theme.bar.buttons.network.icon_background": "#242438",
+  "theme.bar.menus.menu.systray.dropdownmenu.text": "#ffffff",
+  "theme.bar.menus.menu.systray.dropdownmenu.background": "#000000",
+  "theme.bar.menus.popover.text": "#ffffff",
+  "bar.customModules.submap.label": true,
+  "bar.customModules.kbLayout.label": true,
+  "theme.bar.menus.tooltip.text": "#ffffff",
+  "theme.bar.menus.tooltip.background": "#11111b"
 }

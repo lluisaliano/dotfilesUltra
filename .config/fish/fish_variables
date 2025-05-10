@@ -1,5 +1,6 @@
 # This file contains fish universal variable definitions.
 # VERSION: 3.0
+SETUVAR --export PYENV_ROOT:/home/lluis/\x2epyenv\x1e\x2d\x2derase
 SETUVAR __fish_initialized:3800
 SETUVAR fish_color_autosuggestion:4D5566
 SETUVAR fish_color_cancel:\x2d\x2dreverse
@@ -18,9 +19,9 @@ SETUVAR fish_color_match:F07178
 SETUVAR fish_color_normal:B3B1AD
 SETUVAR fish_color_operator:E6B450
 SETUVAR fish_color_option:B3B1AD
-SETUVAR fish_color_param:ffffff
+SETUVAR fish_color_param:ffd75f
 SETUVAR fish_color_quote:5fffaf
-SETUVAR fish_color_redirection:FFEE99
+SETUVAR fish_color_redirection:d7ffff
 SETUVAR fish_color_search_match:\x2d\x2dbackground\x3dE6B450
 SETUVAR fish_color_selection:\x2d\x2dbackground\x3dE6B450
 SETUVAR fish_color_status:red
@@ -41,3 +42,4 @@ SETUVAR fish_pager_color_selected_background:\x2d\x2dbackground\x3dE6B450
 SETUVAR fish_pager_color_selected_completion:\x1d
 SETUVAR fish_pager_color_selected_description:\x1d
 SETUVAR fish_pager_color_selected_prefix:\x1d
+SETUVAR fish_user_paths:/home/lluis/\x2edeno/bin\x1e/home/lluis/\x2elocal/share/gem/ruby/3\x2e3\x2e0/bin\x1e/home/lluis/\x2ecargo/bin\x1e/usr/local/texlive/2025/bin/x86_64\x2dlinux\x1e/home/lluis/\x2epyenv/bin
