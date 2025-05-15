@@ -42,7 +42,7 @@
         "storage",
         "weather",
         "updates",
-        "media"
+        "cava"
       ],
       "middle": [
         "workspaces"
@@ -140,11 +140,11 @@
   "bar.customModules.cava.showIcon": true,
   "theme.bar.buttons.modules.cava.spacing": "0.5em",
   "bar.customModules.cava.showActiveOnly": true,
-  "theme.bar.buttons.modules.cava.text": "#f6f5f4",
+  "theme.bar.buttons.modules.cava.text": "#ffffff",
   "theme.bar.buttons.modules.cava.icon": "#1ed75f",
   "bar.customModules.cava.rightClick": "",
   "bar.customModules.cava.leftClick": "hyprpanel toggleWindow mediamenu",
-  "bar.customModules.cava.icon": "",
+  "bar.customModules.cava.icon": "󰽰",
   "bar.customModules.storage.round": true,
   "bar.customModules.storage.label": true,
   "bar.notifications.hideCountWhenZero": true,
@@ -269,5 +269,8 @@
   "bar.customModules.submap.label": true,
   "bar.customModules.kbLayout.label": true,
   "theme.bar.menus.tooltip.text": "#ffffff",
-  "theme.bar.menus.tooltip.background": "#11111b"
+  "theme.bar.menus.tooltip.background": "#11111b",
+  "bar.customModules.cava.stereo": true,
+  "theme.bar.buttons.modules.cava.background": "#000000",
+  "bar.customModules.cava.bars": 10
 }
