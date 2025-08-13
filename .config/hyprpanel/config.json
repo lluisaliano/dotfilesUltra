@@ -41,8 +41,7 @@
         "cputemp",
         "storage",
         "weather",
-        "updates",
-        "cava"
+        "updates"
       ],
       "middle": [
         "workspaces"
@@ -272,5 +271,9 @@
   "theme.bar.menus.tooltip.background": "#11111b",
   "bar.customModules.cava.stereo": true,
   "theme.bar.buttons.modules.cava.background": "#000000",
-  "bar.customModules.cava.bars": 10
+  "bar.customModules.cava.bars": 10,
+  "bar.customModules.storage.paths": [
+    "/"
+  ],
+  "bar.customModules.weather.label": true
 }
