@@ -5,14 +5,14 @@ This repository contains my personal dotfiles. They are set up with various tool
 ## Tools Used
 
 - **Window Manager**: Hyprland
-- **Status Bar**: Waybar
-- **Idle Management**: Swayidle
-- **Screen Locker**: Swaylock
+- **Bar**: Hyprpanel
+- **Idle Management**: Hypridle
+- **Screen Locker**: Hyprlock
 - **Terminal**: Foot
-- **Shell**: Zsh with Starship prompt
+- **Shell**: Fish with Starship prompt
 - **Application Launcher**: Rofi
 - **Audio Visualizer**: Cava
-- **System Info**: Neofetch
+- **System Info**: Fastfetch
 
 ## Usage
 
