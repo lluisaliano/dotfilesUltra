@@ -151,6 +151,4 @@ esac
 #VCPKG ROOT ENV VARIABLE
 export VCPKG_ROOT=~/vcpkg  
 
-. "$HOME/.atuin/bin/env"
-
 eval "$(atuin init zsh)"
