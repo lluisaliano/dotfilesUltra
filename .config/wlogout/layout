@@ -5,14 +5,8 @@
     "keybind" : "l"
 }
 {
-    "label" : "hibernate",
-    "action" : "systemctl hibernate",
-    "text" : "",
-    "keybind" : "h"
-}
-{
     "label" : "logout",
-    "action" : "hyprctl dispatch exit",
+    "action" : "niri msg action quit -s",
     "text" : "",
     "keybind" : "e"
 }
@@ -21,12 +15,6 @@
     "action" : "systemctl reboot",
     "text" : "",
     "keybind" : "r"
-}
-{
-    "label" : "suspend",
-    "action" : "systemctl suspend",
-    "text" : "",
-    "keybind" : "u"
 }
 {
     "label" : "shutdown",

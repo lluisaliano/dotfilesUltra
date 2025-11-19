@@ -21,7 +21,8 @@ white = "#bfd5de"
 yellow = "#F9B161"
 
 [colors.primary]
-background = "#2c2c2c"
+#background = "#2c2c2c"
+background = "#121212"
 foreground = "#a9b1d6"
 
 [cursor]
@@ -50,7 +51,8 @@ x = 0
 y = 0
 
 [window]
-opacity = 0.81
+#opacity = 0.81
+opacity=1
 
 [window.padding]
 x = 14

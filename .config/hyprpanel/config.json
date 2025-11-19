@@ -28,7 +28,7 @@
   "wallpaper.pywal": false,
   "theme.font.weight": 900,
   "theme.font.name": "Mononoki Nerd Font Mono Bold Italic",
-  "theme.bar.buttons.enableBorders": true,
+  "theme.bar.buttons.enableBorders": false,
   "theme.bar.buttons.radius": "0.6em",
   "theme.bar.margin_bottom": "0.2em",
   "theme.bar.buttons.y_margins": "0em",
@@ -214,7 +214,7 @@
   "theme.bar.buttons.modules.hypridle.background": "#000000",
   "theme.bar.buttons.modules.power.background": "#000000",
   "theme.bar.border.color": "#ffffff",
-  "theme.bar.buttons.style": "wave",
+  "theme.bar.buttons.style": "default",
   "theme.bar.buttons.borderColor": "#ffffff",
   "theme.bar.buttons.text": "#ffffff",
   "theme.bar.buttons.workspaces.border": "#ffffff",
@@ -280,5 +280,6 @@
   "bar.customModules.weather.label": true,
   "bar.workspaces.showWsIcons": false,
   "bar.workspaces.showApplicationIcons": false,
-  "bar.workspaces.applicationIconEmptyWorkspace": ""
+  "bar.workspaces.applicationIconEmptyWorkspace": "",
+  "wallpaper.enable": false
 }
