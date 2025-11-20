@@ -148,14 +148,17 @@ spawn-at-startup "/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1"
 spawn-at-startup "waybar"
 spawn-at-startup "swaync"
 spawn-at-startup "gammastep-indicator"
+spawn-at-startup "caffeine"
 spawn-at-startup "awww-daemon"
 spawn-at-startup "hyprpaper"
-spawn-at-startup "swayidle" "-w"
+spawn-at-startup "hypridle"
 
 // Vicinae has built-in clipboard
 spawn-at-startup "vicinae" "server"
 spawn-at-startup "foot" "-s"
+spawn-at-startup "thunar" "--daemon"
 
+spawn-at-startup "nextcloud"
 
 hotkey-overlay {
     // Uncomment this line to disable the "Important Hotkeys" pop-up at startup.
