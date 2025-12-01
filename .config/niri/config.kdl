@@ -7,6 +7,7 @@
 // Find the full list of options on the wiki:
 // https://yalter.github.io/niri/Configuration:-Input
 input {
+    //warp-mouse-to-focus mode="center-xy"
     // The focus follows make the focus follow the mouse
     //focus-follows-mouse
     keyboard {
@@ -37,7 +38,7 @@ input {
         // dwtp
         // drag false
         // drag-lock
-         natural-scroll
+        // natural-scroll
          accel-speed -0.2
         // accel-profile "flat"
        // scroll-method "two-finger"
@@ -107,7 +108,7 @@ output "eDP-1" {
 }
 
 output "DP-1" {
-    mode "2560x1440@143.973" 
+    mode "2560x1440@143.973"
 }
 
 cursor {
@@ -136,6 +137,37 @@ environment {
     XCURSOR_SIZE "48"
  }
 
+// This is the best feature niri has. It works like the default alt tab on windows. When doing alt tab to another window and then al tab again, we change the current window and then go back.
+recent-windows {
+    // off
+    debounce-ms 750 // Delay to actually focus the window. I think this value is ok
+
+    open-delay-ms 200 // 150 default
+
+    highlight {
+        active-color "#999999ff"
+        urgent-color "#ff9999ff"
+        padding 20
+        corner-radius 8
+    }
+
+    previews {
+        max-height 480
+        max-scale 0.5
+    }
+
+    binds {
+        // Alt+Tab         { next-window; }
+        // Alt+Shift+Tab   { previous-window; }
+        // Alt+grave       { next-window     filter="app-id"; }
+        // Alt+Shift+grave { previous-window filter="app-id"; }
+
+        Mod+Tab         { next-window; }
+        Mod+Shift+Tab   { previous-window; }
+        Mod+grave       { next-window     filter="app-id"; }
+        Mod+Shift+grave { previous-window filter="app-id"; }
+    }
+}
 
 // Add lines like this to spawn processes at startup.
 // Note that running niri as a session supports xdg-desktop-autostart,
@@ -148,7 +180,8 @@ spawn-at-startup "/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1"
 spawn-at-startup "waybar"
 spawn-at-startup "swaync"
 spawn-at-startup "gammastep-indicator"
-spawn-at-startup "caffeine"
+// Not needed as caffeine is started on /etc/xdg/autostart/
+// spawn-at-startup "caffeine"
 spawn-at-startup "awww-daemon"
 spawn-at-startup "hyprpaper"
 spawn-at-startup "hypridle"
@@ -246,7 +279,7 @@ layout {
         // off
 
         // How many logical pixels the ring extends out from the windows.
-        width 2 
+        width 2
 
         // Colors can be set in a variety of ways:
         // - CSS named colors: "red"
@@ -303,9 +336,9 @@ layout {
     tab-indicator {
         hide-when-single-tab
         width 12
-        gap 5
+        gap 8
         gaps-between-tabs 3
-        corner-radius 6
+        corner-radius 8
         length total-proportion=1.0
         position "left"
         place-within-column
@@ -397,11 +430,13 @@ window-rule {
     clip-to-geometry true // Clips window to radius
 }
 
-
 window-rule {
     match app-id="helium"
     match app-id="discord"
     match app-id="code"
+    match app-id="dev.zed.Zed"
+    match app-id="Notion"
+    match app-id="org.gnome.Evince"
     open-maximized true
 }
 
@@ -496,7 +531,7 @@ binds {
     // The way to do in on bottom also works but we can use an extension
     //Mod+P repeat=false {spawn-sh "awww img -t grow $(find ~/Pictures/Backgrounds -type f | vicinae dmenu -p 'Pick a wallpaper...')"; }
     Mod+X repeat=false {spawn "vicinae" "vicinae://extensions/vicinae/system/run";}
-    Mod+Tab {spawn "vicinae" "vicinae://extensions/vicinae/wm/switch-windows";}
+    //Mod+Tab {spawn "vicinae" "vicinae://extensions/vicinae/wm/switch-windows";} // Disabled in favour of  the native niri Alt+Tab
 
     // EXIT Niri
     // --
@@ -707,8 +742,9 @@ binds {
     // SET COLUMN HEIGHT
     Mod+Shift+R { switch-preset-window-height; }
     Mod+Ctrl+R { reset-window-height; }
-    
+
     // FULL SCREEN
+    Mod+Ctrl+Shift+F { maximize-window-to-edges; } // Maximizes excluding the bar
     Mod+Shift+F { fullscreen-window; }
     // Fake full screen
     Mod+Ctrl+F { toggle-windowed-fullscreen; }
