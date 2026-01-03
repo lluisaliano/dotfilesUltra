@@ -17,7 +17,7 @@ input {
 
             // For example:
             layout "us,es"
-            options "grp:alts_toggle" // Alt + Shift to change layout man xkeyboard-config for options
+                options "grp:alts_toggle" // Alt + Shift to change layout man xkeyboard-config for options
 
             // If this section is empty, niri will fetch xkb settings
             // from org.freedesktop.locale1. You can control these using
@@ -190,6 +190,7 @@ spawn-at-startup "hypridle"
 spawn-at-startup "vicinae" "server"
 spawn-at-startup "foot" "-s"
 spawn-at-startup "thunar" "--daemon"
+spawn-at-startup "udiskie"
 
 spawn-at-startup "nextcloud"
 
@@ -661,10 +662,10 @@ binds {
     // You can set a cooldown on any bind, but it's most useful for the wheel.
 
     // Workspace Movement
-    Mod+WheelScrollDown      cooldown-ms=150 { focus-column-right; }
-    Mod+WheelScrollUp        cooldown-ms=150 { focus-column-left; }
-    Mod+Shift+WheelScrollDown cooldown-ms=150 { move-column-right; }
-    Mod+Shift+WheelScrollUp   cooldown-ms=150 { move-column-left; }
+    Mod+WheelScrollDown      cooldown-ms=150 { focus-workspace-down; }
+    Mod+WheelScrollUp        cooldown-ms=150 { focus-workspace-up; }
+    Mod+Shift+WheelScrollDown cooldown-ms=150 { move-column-to-workspace-down; }
+    Mod+Shift+WheelScrollUp   cooldown-ms=150 { move-column-to-workspace-up; }
 
     // Columns Movement with left and right scroll
     Mod+WheelScrollRight      { focus-column-right; }
@@ -673,10 +674,10 @@ binds {
     Mod+Shift+WheelScrollLeft  { move-column-left; }
 
     // Columns Movement with Ctrl and wheelscroll
-    Mod+Ctrl+WheelScrollDown      { focus-workspace-down; }
-    Mod+Ctrl+WheelScrollUp        { focus-workspace-up; }
-    Mod+Ctrl+Shift+WheelScrollDown { move-column-to-workspace-down; }
-    Mod+Ctrl+Shift+WheelScrollUp   { move-column-to-workspace-up; }
+    Mod+Ctrl+WheelScrollDown      { focus-column-right; }
+    Mod+Ctrl+WheelScrollUp        { focus-column-left; }
+    Mod+Ctrl+Shift+WheelScrollDown { move-column-right; }
+    Mod+Ctrl+Shift+WheelScrollUp   { move-column-left; }
 
     // Similarly, you can bind touchpad scroll "ticks".
     // Touchpad scrolling is continuous, so for these binds it is split into

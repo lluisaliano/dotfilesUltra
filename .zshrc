@@ -134,6 +134,8 @@ typeset -A ZSH_HIGHLIGHT_STYLES
 ZSH_HIGHLIGHT_STYLES[unknown-token]='fg=red'
 
 eval "$(zoxide init zsh)"
+#CODEX COMPLETIONS
+eval "$(codex completion zsh)"
 
 # Fetch (Use Nitch)
 #nitch

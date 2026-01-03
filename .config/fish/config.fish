@@ -17,3 +17,6 @@ if not string match -q -- $PNPM_HOME $PATH
 end
 # pnpm end
 fastfetch
+
+# uv
+fish_add_path "/home/lluis/.local/bin"

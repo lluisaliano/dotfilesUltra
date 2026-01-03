@@ -22,7 +22,8 @@ yellow = "#F9B161"
 
 [colors.primary]
 #background = "#2c2c2c"
-background = "#121212"
+#background = "#121212"
+background = "#000000"
 foreground = "#a9b1d6"
 
 [cursor]

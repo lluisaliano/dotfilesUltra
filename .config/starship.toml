@@ -70,3 +70,9 @@ truncation_symbol = "./"
 
 [os]
 disabled=true
+
+[cpp]
+disabled = false
+symbol = " "
+commands = [["clang++", "--version"]]
+format = 'via [$symbol($name-$version)]($style)'
