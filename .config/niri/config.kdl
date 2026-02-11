@@ -110,6 +110,9 @@ output "eDP-1" {
 output "DP-1" {
     mode "2560x1440@143.973"
 }
+output "DP-3" {
+    mode "2560x1440@143.973"
+}
 
 cursor {
     xcursor-theme "oreo_red_cursors"
@@ -190,9 +193,9 @@ spawn-at-startup "hypridle"
 spawn-at-startup "vicinae" "server"
 spawn-at-startup "foot" "-s"
 spawn-at-startup "thunar" "--daemon"
-spawn-at-startup "udiskie"
+spawn-at-startup "udiskie" "-t"
 
-spawn-at-startup "nextcloud"
+// spawn-at-startup "nextcloud"
 
 hotkey-overlay {
     // Uncomment this line to disable the "Important Hotkeys" pop-up at startup.
@@ -518,9 +521,10 @@ binds {
     // BINDS FOR RUNNING PROGRAMS
     // --
     Mod+Return hotkey-overlay-title="Open a Terminal: foot" { spawn "footclient"; }
+//    Mod+Return hotkey-overlay-title="Open a Terminal: ghostty" { spawn "ghostty"; }
     Mod+Alt+L hotkey-overlay-title="Lock the Screen: hyprlock" { spawn "hyprlock"; }
     Mod+E { spawn "helium-browser"; }
-    Mod+D {spawn "code"; }
+    Mod+D {spawn "zeditor"; }
     Mod+A {spawn "thunar"; }
     // Hyperpicker
     Mod+P { spawn "hyprpicker" "-a"; }
@@ -531,7 +535,7 @@ binds {
     Mod+Z {spawn "vicinae" "vicinae://extensions/sovereign/awww-switcher/wpgrid"; }
     // The way to do in on bottom also works but we can use an extension
     //Mod+P repeat=false {spawn-sh "awww img -t grow $(find ~/Pictures/Backgrounds -type f | vicinae dmenu -p 'Pick a wallpaper...')"; }
-    Mod+X repeat=false {spawn "vicinae" "vicinae://extensions/vicinae/system/run";}
+    Mod+X repeat=false {spawn "vicinae" "deeplink" "vicinae://extensions/vicinae/system/run" "open";}
     //Mod+Tab {spawn "vicinae" "vicinae://extensions/vicinae/wm/switch-windows";} // Disabled in favour of  the native niri Alt+Tab
 
     // EXIT Niri
@@ -792,7 +796,7 @@ binds {
     // Mod+Space       { switch-layout "next"; }
     // Mod+Shift+Space { switch-layout "prev"; }
 
-    Mod+Ctrl+A  { screenshot; }
+    Mod+Shift+A  { screenshot; }
     Mod+XF86Explorer  { screenshot; }
     XF86Explorer { screenshot-screen; }
     Alt+XF86Explorer { screenshot-window; }

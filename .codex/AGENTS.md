@@ -38,12 +38,39 @@ When writing or modifying code:
 ### Workflow
 
 * For complex tasks:
+  * Create a PLAN_{feature_name}.md file for that feature ask the user if there is any step you dont know how to do or if you have any doubt. Show always the generated plan to the user. Use the template below:
 
-  * Break the work into **small, focused, sequential steps**
-  * Clearly identify dependencies between steps
-  * Propose a plan for approval when complexity warrants it
+    ```markdown
+    # PLAN.md
+
+    ## Objective
+
+    * Clearly state the goal of the feature or change.
+
+    ## Requirements
+
+    * List all functional and non-functional requirements.
+
+    ## Steps
+
+    1. Step 1: Description
+    2. Step 2: Description
+    3. ...
+
+    ## Dependencies
+
+    * List any dependencies or prerequisites.
+
+    ## Verification
+
+    * Describe how to verify the implementation.
+    ```
+  
+  * Clearly identify dependencies between steps.
+  * Usually complex tasks are not single-step tasks, so they are easy to identify and ask the user to do a plan.
 
 * Do not proceed with implementation if the task structure is unclear and affects correctness.
+* If a PLAN_{feature_name}.md file is provided, follow it closely unless the user requests changes.
 
 ---
 

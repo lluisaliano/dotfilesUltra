@@ -15,6 +15,17 @@
     "adapter": "CodeLLDB"
   },
   {
+    "label": "Debug C++ File (CodeLLDB)",
+    "build": {
+      "command": "clang++",
+      "args": ["-o", "main", "$ZED_FILE", "-g", "-std=c++23"],
+      "cwd": "$ZED_WORKTREE_ROOT"
+    },
+    "program": "$ZED_WORKTREE_ROOT/main",
+    "request": "launch",
+    "adapter": "CodeLLDB"
+  },
+  {
     "label": "Debug active Python file",
     "adapter": "Debugpy",
     "program": "$ZED_FILE",

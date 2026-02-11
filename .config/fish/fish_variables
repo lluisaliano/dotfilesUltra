@@ -3,4 +3,4 @@
 SETUVAR --export PYENV_ROOT:/home/lluis/\x2epyenv\x1e\x2d\x2derase
 SETUVAR __fish_initialized:4300
 SETUVAR fish_greeting:
-SETUVAR fish_user_paths:/home/lluis/\x2elocal/bin\x1e/home/lluis/\x2edeno/bin\x1e/home/lluis/\x2elocal/share/gem/ruby/3\x2e3\x2e0/bin\x1e/home/lluis/\x2ecargo/bin\x1e/usr/local/texlive/2025/bin/x86_64\x2dlinux\x1e/home/lluis/\x2epyenv/bin
+SETUVAR fish_user_paths:/home/lluis/\x2elocal/share/flatpak/exports/bin\x1e/home/lluis/\x2elocal/bin\x1e/home/lluis/\x2edeno/bin\x1e/home/lluis/\x2elocal/share/gem/ruby/3\x2e3\x2e0/bin\x1e/home/lluis/\x2ecargo/bin\x1e/usr/local/texlive/2025/bin/x86_64\x2dlinux\x1e/home/lluis/\x2epyenv/bin
