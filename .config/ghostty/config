@@ -1,0 +1,55 @@
+# Ghostty config generated from ~/.config/foot/foot.ini
+
+# Shell/command
+command = fish
+
+# TERM
+term = foot
+
+# Window title
+title = "Ghossty"
+
+# Font
+font-family = "0xProto Nerd Font Mono"
+font-size = 16
+
+# Padding (foot pad=8x10)
+window-padding-x = 9
+window-padding-y = 10
+
+# Cursor
+cursor-style = bar
+cursor-style-blink = true
+# Approximate beam thickness; Ghostty uses an adjustment value, not absolute thickness.
+adjust-cursor-thickness = 2
+
+# Scrollback
+# Foot uses lines; Ghostty uses bytes. Approximate 10,000 lines.
+scrollback-limit = 2000000
+
+# Colors
+background = #000000
+foreground = #a9b1d6
+cursor-color = #dcdccc
+cursor-text = #e4e1e6
+
+palette = 0=#181a29
+palette = 1=#f07178
+palette = 2=#73daca
+palette = 3=#f9b161
+palette = 4=#93bbff
+palette = 5=#d3a7ee
+palette = 6=#98e4ff
+palette = 7=#bfd5de
+palette = 8=#646b8a
+palette = 9=#eb7f84
+palette = 10=#e0ffad
+palette = 11=#ffee7e
+palette = 12=#a3c5ff
+palette = 13=#d6afed
+palette = 14=#98fffd
+palette = 15=#d1e5ed
+
+# Keybinds
+keybind = page_up=scroll_page_up
+keybind = page_down=scroll_page_down
