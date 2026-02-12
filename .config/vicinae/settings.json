@@ -9,24 +9,49 @@
 // Learn more about configuration at https://docs.vicinae.com/config
 
 {
-   "$schema": "https://vicinae.com/schemas/config.json",
-   "font": {
-      "normal": {
-         "family": "JetBrainsMono Nerd Font",
-         "size": 14
+  "$schema": "https://vicinae.com/schemas/config.json",
+  "font": {
+    "normal": {
+      "family": "0xProto Nerd Font",
+      "size": 14
+    }
+  },
+  "theme": {
+    "dark": {
+      "name": "vicinae-dark",
+      "icon_theme": "Papirus"
+    }
+  },
+  "favorites": [],
+  "providers": {
+    "@sovereign/store.vicinae.awww-switcher": {
+      "preferences": {
+        "wallpaperPath": "/home/lluis/Pictures/Backgrounds"
       }
-   },
-   "theme": {
-      "dark": {
-         "icon_theme": "Papirus"
-      }
-   },
-   "favorites": [],
-   "providers": {
-      "@sovereign/store.vicinae.awww-switcher": {
-         "preferences": {
-            "wallpaperPath": "/home/lluis/Pictures/Backgrounds"
-         }
-      }
-   }
+    },
+    "@sovereign/store.vicinae.pacman-updates": {
+      "enabled": false
+    },
+    "files": {
+      "enabled": true
+    }
+  },
+  "close_on_focus_loss": true,
+  "launcher_window": {
+   	"compact_mode": {
+			"enabled": false
+		},
+    "layer_shell": {
+      "enabled": true,
+
+      // 'exclusive' | 'on_demand'
+      // WARNING: 'exclusive' is known to break mouse stuff on popups (such as the action panel) on Hyprland
+      "keyboard_interactivity": "on_demand",
+
+      // either 'overlay' or 'top'.
+      // Other layers are not supported as they are unsuitable for a launcher.
+      // 'top' is recommended as using 'overlay' will make the vicinae window appear on top of IME popovers in some scenarios.
+      "layer": "overlay"
+    }
+  }
 }
