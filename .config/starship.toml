@@ -2,10 +2,26 @@
 add_newline = false
 
 # Replace the "❯" symbol in the prompt with "➜"
-[character]                            # The name of the module we are configuring is "character"
-success_symbol = "[    ](green)"     # The "sucscess_symbol" segment is being set to "➜" with the color "bold purple"
+#[character]                            # The name of the module we are configuring is "character"
+# success_symbol = "[    ](green)"     # The "sucscess_symbol" segment is being set to "➜" with the color "bold purple"
+# error_symbol = "[❌](red) "
 
-error_symbol = "[❌](red) "
+format = """
+$username\
+$hostname\
+$directory\
+$git_branch\
+$git_state\
+$git_status\
+$cmd_duration\
+$line_break\
+$character"""
+
+[character]
+success_symbol = "[ ❯](green)"
+error_symbol = "[ ❯](red)"
+vimcmd_symbol = "[ ❮](purple)"
+
 # Disable the package module, hiding it from the prompt completely
 [package]
 disabled = true
