@@ -70,6 +70,8 @@ input {
     // Setting max-scroll-amount="0%" makes it work only on windows already fully on screen.
     // focus-follows-mouse max-scroll-amount="0%"
 }
+
+// Outputs
 // You can configure outputs by their name, which you can find
 // by running `niri msg outputs` while inside a niri instance.
 // The built-in laptop monitor is usually called "eDP-1".
@@ -114,6 +116,7 @@ output "DP-3" {
     mode "2560x1440@143.973"
 }
 
+// Cursor
 cursor {
     xcursor-theme "oreo_red_cursors"
     xcursor-size 48
@@ -122,6 +125,7 @@ cursor {
    //hide-after-inactive-ms 2000
 }
 
+// Lid Controllers (Disabled as niri automatically handles monitor shutdown)
 switch-events {
 //    lid-close { spawn "notify-send" "The laptop lid is closed!"; }
 //    lid-open { spawn "notify-send" "The laptop lid is open!"; }
@@ -132,6 +136,7 @@ clipboard {
     disable-primary
 }
 
+// Environment Variables
 environment {
     QT_QPA_PLATFORMTHEME "qt6ct" // QT themes
     ELECTRON_OZONE_PLATFORM_HINT "auto"
@@ -140,7 +145,8 @@ environment {
     XCURSOR_SIZE "48"
  }
 
-// This is the best feature niri has. It works like the default alt tab on windows. When doing alt tab to another window and then al tab again, we change the current window and then go back.
+// Recent Windows (Alt Tab for Niri)
+// This is the best feature niri has. It works like the default alt tab on windows. When doing windows tab to another window and then al tab again, we change the current window and then go back.
 recent-windows {
     // off
     debounce-ms 750 // Delay to actually focus the window. I think this value is ok
@@ -172,6 +178,7 @@ recent-windows {
     }
 }
 
+// Spawn apps (Niri autostarts Nextcloud)
 // Add lines like this to spawn processes at startup.
 // Note that running niri as a session supports xdg-desktop-autostart,
 // which may be more convenient to use.
@@ -197,12 +204,14 @@ spawn-at-startup "udiskie" "-t"
 
 // spawn-at-startup "nextcloud"
 
+// Hotkey tooltips disabled
 hotkey-overlay {
     // Uncomment this line to disable the "Important Hotkeys" pop-up at startup.
     skip-at-startup
     hide-not-bound
 }
 
+// Omit Client side decorations
 // Uncomment this line to ask the clients to omit their client-side decorations if possible.
 // If the client will specifically ask for CSD, the request will be honored.
 // Additionally, clients will be informed that they are tiled, removing some client-side rounded corners.
@@ -210,6 +219,7 @@ hotkey-overlay {
 // After enabling or disabling this, you need to restart the apps for this to take effect.
 prefer-no-csd
 
+// Screenshots
 // You can change the path where screenshots are saved.
 // A ~ at the front will be expanded to the home directory.
 // The path is formatted with strftime(3) to give you the screenshot date and time.
@@ -218,9 +228,10 @@ screenshot-path "~/Pictures/Screenshoots/Screenshot from %Y-%m-%d %H-%M-%S.png"
 // You can also set this to null to disable saving screenshots to disk.
 // screenshot-path null
 
-// Add named workspace on top
+// Add named workspace on top to keep it always open
 workspace "browser"
 
+// Layout
 // Settings that influence how windows are positioned and sized.
 // Find more information on the wiki:
 // https://yalter.github.io/niri/Configuration:-Layout
@@ -339,15 +350,15 @@ layout {
 
     tab-indicator {
         hide-when-single-tab
-        width 12
-        gap 8
-        gaps-between-tabs 3
+        width 9
+        gap 6
+        gaps-between-tabs 5
         corner-radius 8
         length total-proportion=1.0
         position "left"
         place-within-column
-        active-color "#33ccfe"
-        inactive-color "#ffffffff"
+        active-color "#A30D00"
+        inactive-color "#F78572"
     }
 
     // You can enable drop shadows for windows.
@@ -400,6 +411,7 @@ layout {
     }
 }
 
+// Layer Rule for Hyprpaper
 // Hyprpaper sets the background for overview
 layer-rule {
     match namespace="hyprpaper"
@@ -450,6 +462,7 @@ window-rule {
     // - host Firefox (app-id is "firefox")
     // - Flatpak Firefox (app-id is "org.mozilla.firefox")
     match app-id=r#"firefox$"# title="^Picture-in-Picture$"
+    match title="Zed — Settings"
     open-floating true
 }
 
@@ -503,6 +516,7 @@ window-rule {
     clip-to-geometry true
 }
 
+// Binds
 binds {
     // Keys consist of modifiers separated by + signs, followed by an XKB key name
     // in the end. To find an XKB name for a particular key, you may use a program
