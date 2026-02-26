@@ -201,8 +201,10 @@ spawn-at-startup "vicinae" "server"
 spawn-at-startup "foot" "-s"
 spawn-at-startup "thunar" "--daemon"
 spawn-at-startup "udiskie" "-t"
+spawn-at-startup "blueman-tray"
 
-// spawn-at-startup "nextcloud"
+// Start nextcloud from here or it gets bugged
+//spawn-at-startup "nextcloud"
 
 // Hotkey tooltips disabled
 hotkey-overlay {
@@ -357,8 +359,8 @@ layout {
         length total-proportion=1.0
         position "left"
         place-within-column
-        active-color "#A30D00"
-        inactive-color "#F78572"
+        active-color "#000000"
+        inactive-color "#8F8F8F"
     }
 
     // You can enable drop shadows for windows.
@@ -453,6 +455,7 @@ window-rule {
     match app-id="dev.zed.Zed"
     match app-id="Notion"
     match app-id="org.gnome.Evince"
+    match app-id="Lotion"
     open-maximized true
 }
 

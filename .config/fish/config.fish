@@ -20,3 +20,6 @@ fastfetch
 
 # uv
 fish_add_path "/home/lluis/.local/bin"
+
+#Enable vim commands:
+set -g fish_key_bindings fish_vi_key_bindings
