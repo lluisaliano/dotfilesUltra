@@ -1,8 +1,9 @@
 {
   "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
   "logo": {
-    "source": "arch",
-    "type": "small",
+    // "source": "pacmanArch",
+    // "type": "file",
+    "source": "~/.config/fastfetch/icons/pacmanArch.txt",
     "padding": {
       "top": 1,
       "left": 3
@@ -17,7 +18,9 @@
       "separator": "blue"
     },
     "separator": " ",
-    "constants": ["   »»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»"]
+    "constants": [
+      "   »»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»"
+    ]
   },
   "modules": [
     "break",
@@ -111,7 +114,6 @@
     //   "format": "     󰍛 󰋊 󰓇  󰄲",
     //   "outputColor": "yellow"
     // },
-
     // {
     //   "type": "custom",
     //   "format": "{$1}",

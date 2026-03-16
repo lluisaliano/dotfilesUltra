@@ -1,6 +1,6 @@
 if status is-interactive
     # Commands to run in interactive sessions can go here
-    atuin init fish | source
+    # atuin init fish | source
 end
 
 starship init fish | source
@@ -16,7 +16,9 @@ if not string match -q -- $PNPM_HOME $PATH
     set -gx PATH "$PNPM_HOME" $PATH
 end
 # pnpm end
-fastfetch
+
+#Fastfech with image
+fastfetch --logo /home/lluis/Pictures/Backgrounds/rocket.jpg --logo-type sixel --logo-width 30 --logo-height 7
 
 # uv
 fish_add_path "/home/lluis/.local/bin"

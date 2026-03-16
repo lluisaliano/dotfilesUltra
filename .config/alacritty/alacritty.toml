@@ -37,13 +37,12 @@ shape = "Beam"
 size = 16
 
 [font.bold]
-family = "Monofur Nerd Font Mono"
+family = "0xProto Nerd Font Mono"
 
 [font.italic]
-family = "Monofur Nerd Font Mono"
+family = "0xProto Nerd Font Mono"
 
 [font.normal]
-family = "Monofur Nerd Font Mono"
 style = "Regular"
 
 [font.offset]
