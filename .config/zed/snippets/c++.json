@@ -1,0 +1,11 @@
+{
+  "C++ main": {
+    "prefix": "main",
+    "body": [
+      "int main() {",
+      "    $0",
+      "}"
+    ],
+    "description": "C++ main function"
+  }
+}

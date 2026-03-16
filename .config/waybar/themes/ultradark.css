@@ -1,0 +1,476 @@
+/*                                                                                                                                       */
+/*    /$$      /$$                     /$$                                  /$$$$$$   /$$               /$$                              */
+/*   | $$  /$ | $$                    | $$                                 /$$__  $$ | $$              | $$                              */
+/*   | $$ /$$$| $$  /$$$$$$  /$$   /$$| $$$$$$$   /$$$$$$   /$$$$$$       | $$  \__//$$$$$$   /$$   /$$| $$  /$$$$$$                     */
+/*   | $$/$$ $$ $$ |____  $$| $$  | $$| $$__  $$ |____  $$ /$$__  $$      |  $$$$$$|_  $$_/  | $$  | $$| $$ /$$__  $$                    */
+/*   | $$$$_  $$$$  /$$$$$$$| $$  | $$| $$  \ $$  /$$$$$$$| $$  \__/       \____  $$ | $$    | $$  | $$| $$| $$$$$$$$                    */
+/*   | $$$/ \  $$$ /$$__  $$| $$  | $$| $$  | $$ /$$__  $$| $$             /$$  \ $$ | $$ /$$| $$  | $$| $$| $$_____/                    */
+/*   | $$/   \  $$|  $$$$$$$|  $$$$$$$| $$$$$$$/|  $$$$$$$| $$            |  $$$$$$/ |  $$$$/|  $$$$$$$| $$|  $$$$$$$                    */
+/*   |__/     \__/ \_______/ \____  $$|_______/  \_______/|__/             \______/   \___/   \____  $$|__/ \_______/                    */
+/*                           /$$  | $$                                                        /$$  | $$                                  */
+/*                          |  $$$$$$/                                                       |  $$$$$$/                                  */
+/*                           \______/                                                         \______/                                   */
+
+* {
+    /* `otf-font-awesome` is required to be installed for icons */
+    font-family: Mononoki Nerd Font;
+    font-weight: 400;
+    font-size: 15px;
+    border-radius: 0px;
+}
+
+window#waybar {
+  background-color: transparent;
+  color: #E5E5E5;
+  border-radius: 0px;
+}
+
+#waybar > box {
+  /* Niri spacing is 8px, but set 6px on top because it looks better for me. Borders is 8px */
+  margin: 6px 8px 0px 8px;
+  padding: 2px;
+  background-color: rgba(0, 0, 0, 1);
+  border-radius: 8px;
+  /* border: 1px white solid; */
+  /* border: 1px #33ccfe solid; */
+}
+
+tooltip {
+    background: rgba(0, 0, 0, 1);
+    border-radius: 8px;
+    padding: 2px;
+}
+
+window#waybar.termite {
+    background-color: #3F3F3F;
+}
+
+window#waybar.chromium {
+    background-color: #11111b;
+    border: none;
+}
+
+button {
+    /* Use box-shadow instead of border so the text isn't offset */
+    box-shadow: inset 0 3px transparent;
+    /* Avoid rounded borders under each button name */
+    border: 1px solid black;
+    border-radius: 8px;
+}
+
+/* https://github.com/Alexays/Waybar/wiki/FAQ#the-workspace-buttons-have-a-strange-hover-effect */
+button:hover {
+    background: inherit;
+}
+#workspaces button {
+    padding: 1px 6px;
+    color: #E5E5E5;
+    background-color: transparent;
+}
+
+#workspaces button:hover {
+    background:rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+}
+
+#workspaces button.active {
+    background:rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.242);
+}
+
+#workspaces button.focused {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+#workspaces button.visible {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    
+}
+
+
+#windows {
+    background: black;
+    border-radius: 8px;
+    border: 1px solid rgba(191, 147, 147, 0.242);
+    padding: 0 5px;
+}
+
+#mode {
+    background-color: #64727D;
+    box-shadow: inset 0 0px #e5e5e5;
+    background: rgba(5, 5, 5, 0.3);
+    color: #000000;
+    padding: 1px 10px 1px 10px;
+    border-radius: 0px 0px 0px 0px;
+    margin-top: 5px;
+}
+
+
+#clock,
+#battery,
+#cpu,
+#memory,
+#disk,
+#backlight,
+#pulseaudio,
+#wireplumber,
+#mode,
+#temperature,
+#custom-weather,
+#idle_inhibitor,
+#scratchpad,
+#custom-power,
+#power-profiles-daemon,
+#custom-gpt,
+#custom-swaync,
+#language,
+#tray,
+#custom-pacman,
+#window,
+#mpd {
+    border-radius: 8px;
+    background: rgba(30, 30, 46, 0);
+    padding: 1px 10px 1px 10px
+}
+
+#window,
+#workspaces {
+    color: #e5e5e5;
+    padding: 1px 1px 1px 1px; 
+}
+
+#window:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+#custom-pacman:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+#hardware > * {
+    margin: 0px 10px 0px 0px;
+}
+
+/* If workspaces is the rightmost module, omit right margin */
+.modules-right > widget:last-child > #workspaces {
+    margin-right: 0;
+}
+
+#clock {
+    color: #E5E5E5;
+    margin-right: 5px;
+    font-weight: bolder;
+    font-size: 15px;
+}
+
+#clock:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+#custom-weather {
+    color: #E5E5E5;
+    padding: 1px 6px 1px 8px;
+}
+
+#custom-weather:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+#custom-spotify {
+    color: #E5E5E5;
+    padding: 1px 6px 1px 8px;
+}
+
+#custom-spotify:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+#custom-cava {
+    background: rgb(30, 30, 46);
+    color: #E5E5E5;
+    padding: 1px 10px;
+}
+
+#custom-cava:hover {
+    background-color: #181825;
+}
+
+#custom-gpt {
+    font-size: 22px;
+        background-image: url('/home/lluis/.config/waybar/icons/openai-transparent.png');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 19px 20px;
+    color: #E5E5E5;
+    border-radius: 8px;
+}
+
+#custom-gpt:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+
+#cava-player .status {
+    font-size: 18px;
+    color: #E5E5E5; /* White icon color */
+}
+
+#custom-power {   
+    color: #6ec8f8;
+    font-size: 18px;
+    padding: 2px 5px 1px 1px;
+    margin-right: 2px;
+}
+
+#custom-power:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+#battery {
+    color: #E5E5E5;
+}
+
+#battery.charging, #battery.plugged {
+    color: #85eb81;
+}
+
+#battery:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+@keyframes blink {
+    to {
+        background: rgb(30, 30, 46);
+        color: #000000;
+        padding: 1px 10px 1px 10px;
+        margin-top: 5px;
+
+    }
+}
+
+/* Using steps() instead of linear as a timing function to limit cpu usage */
+#battery.critical:not(.charging) {
+    color: #E5E5E5;
+    animation-name: blink;
+    animation-duration: 0.5s;
+    animation-timing-function: steps(12);
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+#power-profiles-daemon {
+    padding-right: 15px;
+        color: #000000;
+}
+
+#power-profiles-daemon.performance {
+    color: #E5E5E5;
+}
+
+#power-profiles-daemon.balanced {
+    color: #E5E5E5;
+}
+
+#power-profiles-daemon.power-saver {
+    color: #000000;
+}
+
+label:focus {
+    background: rgb(30, 30, 46);
+}
+
+#memory {
+    color: #E5E5E5;
+    padding: 1px 9px 1px 5px;
+}
+
+#memory:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+#backlight {
+    color: #E5E5E5;
+
+}
+
+#network {
+    color: #E5E5E5;
+}
+
+#network.disconnected {
+    color: #f2564b;
+}
+
+#network:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+#pulseaudio {
+    color: #E5E5E5;
+}
+
+#pulseaudio.muted {
+    color: #E5E5E5;
+}
+
+#wireplumber {
+    color: #000000;
+}
+
+#pulseaudio:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+#wireplumber.muted {
+    background: rgb(30, 30, 46);
+    padding: 1px 10px 1px 10px;
+    margin-top: 5px;
+}
+
+#custom-media {
+    color: #2a5c45;
+    min-width: 100px;
+}
+
+#custom-media.custom-spotify {
+    background: rgb(30, 30, 46);
+    padding: 1px 10px 1px 10px;
+    margin-top: 5px;
+}
+
+#custom-media.custom-vlc {
+    background: rgb(30, 30, 46);
+    margin-top: 5px;
+}
+
+#custom-swaync {
+    color: #E5E5E5;
+}
+
+#custom-swaync:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Active Icons of Tray on hover */
+#tray > *:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+}
+/* Move Tray closer to power button */
+#tray {
+    padding-right: 3px;
+}
+
+#idle_inhibitor {
+    color: #E5E5E5;
+     padding: 1px 12px 1px 5px;
+}
+
+#idle_inhibitor.activated {
+    color: #E5E5E5;
+}
+
+#idle_inhibitor:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+#mpd {
+    background-color: #66cc99;
+    color: #2a5c45;
+}
+
+#mpd.disconnected {
+    background-color: #f53c3c;
+}
+
+#mpd.stopped {
+    background-color: #90b1b1;
+}
+
+#mpd.paused {
+    background-color: #51a37a;
+}
+
+#language {
+    background: #000000;
+    color: #E5E5E5;
+    padding: 0 5px;
+    margin: 0 5px;
+    min-width: 16px;
+    border-radius: 8px;
+}
+
+#disk:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+#cpu:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+#temperature:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+#cpu {
+    margin-left: 2px;
+}
+
+#language:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+#keyboard-state {
+    background: #97e1ad;
+    color: #000000;
+    padding: 0 0px;
+    margin: 0 5px;
+    min-width: 16px;
+}
+
+#keyboard-state > label {
+    padding: 0 5px;
+}
+
+#keyboard-state > label.locked {
+    background: rgb(30, 30, 46);
+}
+
+#scratchpad {
+    background: rgb(30, 30, 46);
+        background: rgba(5, 5, 5, 0.2);
+        color: #000000;
+        padding: 1px 10px 1px 10px;
+        margin-top: 5px;
+}
+
+#scratchpad.empty {
+	background-color: transparent;
+        background: rgb(30, 30, 46);
+        color: #000000;
+        padding: 1px 10px 1px 10px;
+        margin-top: 5px;
+}
+
+#privacy {
+    padding: 0;
+}
+
+#privacy-item {
+    padding: 0 5px;
+    color: white;
+}
+
+#privacy-item.screenshare {
+    background-color: #cf5700;
+}
+
+#privacy-item.audio-in {
+    background-color: #1ca000;
+}
+
+#privacy-item.audio-out {
+    background-color: #0069d4;
+}

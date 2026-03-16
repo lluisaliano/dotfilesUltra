@@ -1,0 +1,15 @@
+[2025-11-24 11:42:56.928] [info] Using configuration file /home/lluis/.config/waybar/config.jsonc
+[2025-11-24 11:42:56.931] [info] Discovered appearance 'dark'
+[2025-11-24 11:42:56.969] [info] Using CSS file /home/lluis/.config/waybar/style.css
+
+(waybar:15403): Gtk-WARNING **: 11:42:56.970: Theme parsing error: ultradark.css:64:14: Not using units is deprecated. Assuming 'px'.
+[2025-11-24 11:42:56.976] [info] Niri IPC starting
+[2025-11-24 11:42:56.982] [warning] 'swap-icon-label' must be a bool.
+[2025-11-24 11:42:57.142] [warning] Requested height: 30 is less than the minimum height: 40 required by the modules
+[2025-11-24 11:42:57.142] [info] Bar configured (width: 2560, height: 40) for output: DP-1
+
+** (waybar:15403): WARNING **: 11:42:57.248: Status Notifier Item with bus name ':1.28' and object path '/org/ayatana/NotificationItem/nm_applet' is already registered
+
+** (waybar:15403): WARNING **: 11:42:58.555: Status Notifier Item with bus name ':1.28' and object path '/org/ayatana/NotificationItem/nm_applet' is already registered
+
+** (waybar:15403): WARNING **: 17:40:38.784: Status Notifier Item with bus name ':1.28' and object path '/org/ayatana/NotificationItem/nm_applet' is already registered

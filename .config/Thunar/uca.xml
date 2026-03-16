@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<actions>
+<action>
+	<icon>utilities-terminal</icon>
+	<name>Abrir un terminal aquí</name>
+	<submenu></submenu>
+	<unique-id>1648065488621733-1</unique-id>
+	<command>foot --working-directory %f</command>
+	<description>Fiit</description>
+	<range></range>
+	<patterns>*</patterns>
+	<startup-notify/>
+	<directories/>
+</action>
+<action>
+	<icon>zed</icon>
+	<name>Open Zed</name>
+	<submenu></submenu>
+	<unique-id>1769547174830199-1</unique-id>
+	<command>zeditor .</command>
+	<description>Open Zed Here</description>
+	<range>*</range>
+	<patterns>*</patterns>
+	<directories/>
+	<image-files/>
+	<other-files/>
+	<text-files/>
+</action>
+<action>
+	<icon>vscode</icon>
+	<name>VS Code</name>
+	<submenu></submenu>
+	<unique-id>1742213530688926-1</unique-id>
+	<command>code . --ozone-platform-hint=auto</command>
+	<description>Abrir Visual Code Aquí</description>
+	<range>*</range>
+	<patterns>*</patterns>
+	<directories/>
+	<image-files/>
+	<other-files/>
+	<text-files/>
+</action>
+<action>
+	<icon>preferences-system-search</icon>
+	<name>Buscar archivos</name>
+	<submenu></submenu>
+	<unique-id>1651222878076693-1</unique-id>
+	<command>catfish --path=%f</command>
+	<description>Buscar Archivos por nombre</description>
+	<range></range>
+	<patterns>*</patterns>
+	<directories/>
+</action>
+</actions>

@@ -1,0 +1,296 @@
+// -*- mode: jsonc -*-
+//
+// /$$      /$$                     /$$                                   /$$$$$$                       /$$$$$$  /$$
+// | $$  /$ | $$                    | $$                                 /$$__  $$                     /$$__  $$|__/
+// | $$ /$$$| $$  /$$$$$$  /$$   /$$| $$$$$$$   /$$$$$$   /$$$$$$       | $$  \__/  /$$$$$$  /$$$$$$$ | $$  \__/ /$$  /$$$$$$
+// | $$/$$ $$ $$ |____  $$| $$  | $$| $$__  $$ |____  $$ /$$__  $$      | $$       /$$__  $$| $$__  $$| $$$$    | $$ /$$__  $$
+// | $$$$_  $$$$  /$$$$$$$| $$  | $$| $$  \ $$  /$$$$$$$| $$  \__/      | $$      | $$  \ $$| $$  \ $$| $$_/    | $$| $$  \ $$
+// | $$$/ \  $$$ /$$__  $$| $$  | $$| $$  | $$ /$$__  $$| $$            | $$    $$| $$  | $$| $$  | $$| $$      | $$| $$  | $$
+// | $$/   \  $$|  $$$$$$$|  $$$$$$$| $$$$$$$/|  $$$$$$$| $$            |  $$$$$$/|  $$$$$$/| $$  | $$| $$      | $$|  $$$$$$$
+// |__/     \__/ \_______/ \____  $$|_______/  \_______/|__/             \______/  \______/ |__/  |__/|__/      |__/ \____  $$
+//                         /$$  | $$                                                                                 /$$  \ $$
+//                        | $$$$$$$/                                                                                |  $$$$$$/
+//                         \______/                                                                                  \______/
+//
+{
+  "layer": "top", // Waybar at top layer
+  // "position": "bottom", // Waybar position (top|bottom|left|right)
+  "position": "top",
+  "height": 30, // Waybar height (to be removed for auto height)
+  // "width": 1280, // Waybar width
+  "reload_style_on_change": true,
+  "spacing": 4, // Gaps between modules (4px)
+  // Choose the order of the modules
+  "modules-left": [
+    "niri/workspaces",
+    "group/hardware",
+    "battery",
+    "custom/pacman",
+    // "custom/gpt",
+    "custom/weather",
+    "niri/window",
+  ],
+  "modules-center": [
+    "clock"
+  ],
+  "modules-right": [
+    "systemd-failed-units",
+    //"idle_inhibitor",
+    "backlight",
+    "pulseaudio",
+    // "custom/swaync",
+    "niri/language",
+    "tray",
+    "custom/power",
+  ],
+  "custom/pacman": {
+    "format": "{} 󰊠 ",
+    // "format": "{} 󰮯 ",
+    "interval": "300",
+    //    "exec": "checkupdates | wc -l", // Not Aur
+    "exec": "paru -Qu | wc -l", // Aur (requieres paru)
+  },
+  "systemd-failed-units": {
+    "hide-on-ok": false, // Do not hide if there is zero failed units
+    "format": "{nr_failed} ✗",
+    "format-ok": "✓",
+    "system": true, // Monitor failed systemwide units.
+    "user": true // Ignore failed user units.
+  },
+  "group/hardware": {
+    "orientation": "horizontal",
+    "modules": [
+      "cpu",
+      "memory",
+      "disk",
+      "temperature"
+    ],
+    // Make the group hide and appear on hover
+    "drawer": {
+      "transition-duration": 0.3,
+    },
+  },
+  "temperature": {
+    "format": "{temperatureC}°C ",
+    "hwmon-path-abs": "/sys/devices/platform/coretemp.0/hwmon",
+    "input-filename": "temp1_input",
+  },
+  "cpu": {
+    "format": "{usage}%  ",
+  },
+  "disk": {
+    "format": "{specific_free:0.0f} GB  ",
+    "unit": "GB",
+    "path": "/",
+  },
+  "niri/language": {
+    "format": "{}",
+    "on-click": "niri msg action switch-layout next",
+    "format-es": "- ES -",
+    "format-en": "- EN -",
+  },
+  // Modules configuration
+  "niri/workspaces": {
+    "format": "{index}",
+  },
+  "niri/window": {
+    "format": "-  {app_id}",
+    "rewrite": {
+      ".*code": "-  VS Code 󰨞 ",
+      ".*helium": "-  Helium  ",
+      ".*Alacritty": "-  Alacritty  ",
+      ".*ghostty": "-  Ghostty  ",
+      ".*(Evince|Papers)": "-  Document Viewer 󰈙 ",
+      ".*Notion": "-  Notion  ",
+      ".*Lotion": "-  Lotion  ",
+      ".*thunar": "-  Thunar  ",
+      ".*Minecraft.*": "-  Minecraft 󰍳 ",
+      ".*discord": "-  Discord   ",
+      ".*Bitwarden": "-  Bitwarden  ",
+      ".*feishin.*": "-  Feishin  ",
+      ".*foot.*": "- Foot  ",
+      ".*nextcloud.*": "- Nextcloud  ",
+      ".*org.pulseaudio.pavucontrol.*": "- Volume  ",
+      ".*dev.zed.Zed.*": "- Zed  ",
+    },
+  },
+  "hyprland/workspaces": {
+    "format": "{name}",
+    "persistent-workspaces": {
+      "*": 3,
+    },
+  },
+  "custom/cava": {
+    "format": " ",
+    "tooltip": false,
+    "on-click": "kitty -e cava",
+  },
+  "custom/waypaper": {
+    "format": " ",
+    "tooltip": false,
+    "on-click": "waypaper",
+  },
+  "custom/gpt": {
+    "format": "  ",
+    "tooltip": false,
+    "on-click": "helium-browser https:://chatgpt.com/ --new-window",
+  },
+  "sway/scratchpad": {
+    "format": "{icon} {count}",
+    "show-empty": false,
+    "format-icons": [
+      "",
+      ""
+    ],
+    "tooltip": true,
+    "tooltip-format": "{app}: {title}",
+  },
+  "custom/weather": {
+    "exec": "bash ~/.config/scripts/waybar-weather.sh",
+    "on-click": "gnome-weather",
+    "interval": 600,
+    "tooltip": false,
+    "signal": 3,
+    "format": "{}",
+  },
+  "idle_inhibitor": {
+    "format": "{icon}",
+    "format-icons": {
+      "activated": "",
+      "deactivated": "",
+    },
+  },
+  "tray": {
+    "icon-size": 18,
+    "spacing": 10,
+  },
+  "clock": {
+    // "timezone": "America/New_York",
+    "tooltip-format": "<tt><small>{calendar}</small></tt>",
+    "format-alt": "{:%d-%m-%Y}",
+    "calendar": {
+      "mode": "year",
+      "mode-mon-col": 3,
+      "weeks-pos": "right",
+      "on-scroll": 1,
+      "format": {
+        "months": "<span color='#E5E5E5'><b>{}</b></span>",
+        "days": "<span color='#E5E5E5'><b>{}</b></span>",
+        "weeks": "<span color='#6EC8F8'><b>W{}</b></span>",
+        "weekdays": "<span color='#ffcc66'><b>{}</b></span>",
+        "today": "<span color='#ff6699'><b><u>{}</u></b></span>",
+      },
+    },
+    "actions": {
+      "on-click-right": "mode",
+      "on-scroll-up": "shift_up",
+      "on-scroll-down": "shift_down",
+    },
+  },
+  "memory": {
+    "format": "{}%  ",
+  },
+  "custom/swaync": {
+    "exec": "bash ~/.config/scripts/waybar-swaync.sh",
+    "interval": 1,
+    "tooltip": false,
+    "format": "{} ",
+  },
+  "backlight/slider": {
+    "min": 0,
+    "max": 100,
+    "orientation": "horizontal",
+  },
+  "backlight": {
+    // "device": "acpi_video1",
+    "format": "{percent}% {icon}",
+    "format-icons": [
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      ""
+    ],
+  },
+  "battery": {
+    "states": {
+      // "good": 95,
+      "warning": 30,
+      "critical": 15,
+    },
+    "format": "{capacity}% {icon}",
+    "format-full": "{capacity}% {icon}",
+    "format-charging": "{capacity}% ",
+    "format-plugged": "{capacity}% ",
+    "interval": 3,
+    // "format-good": "", // An empty format will hide the module
+    // "format-full": "",
+    "format-icons": [
+      " ",
+      " ",
+      " ",
+      " ",
+      " "
+    ],
+  },
+  "battery#bat2": {
+    "bat": "BAT2",
+  },
+  "power-profiles-daemon": {
+    "format": "{icon}",
+    "tooltip-format": "Power profile: {profile}\nDriver: {driver}",
+    "tooltip": true,
+    "format-icons": {
+      "default": "",
+      "performance": "",
+      "balanced": "",
+      "power-saver": "",
+    },
+  },
+  "pulseaudio": {
+    // "scroll-step": 1, // %, can be a float
+    "format": "{volume}% {icon}",
+    "format-bluetooth": "{volume}% {icon} ",
+    "format-bluetooth-muted": "  {icon} ",
+    "format-muted": " ",
+    "format-source": " {volume}% ",
+    "format-source-muted": "",
+    "format-icons": {
+      "headphone": "",
+      "hands-free": "",
+      "headset": "",
+      "phone": "",
+      "portable": "",
+      "car": "",
+      "default": [
+        "",
+        "",
+        " "
+      ],
+    },
+    "on-click": "pavucontrol",
+    "on-click-right": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
+  },
+  "custom/media": {
+    "format": "{icon} {text}",
+    "return-type": "json",
+    "max-length": 40,
+    "format-icons": {
+      "spotify": "",
+      "default": "🎜",
+    },
+    "escape": true,
+    "exec": "$HOME/.config/waybar/mediaplayer.py 2> /dev/null", // Script in resources folder
+    // "exec": "$HOME/.config/waybar/mediaplayer.py --player spotify 2> /dev/null" // Filter player based on name
+  },
+  "custom/power": {
+    "format": " 󰣇 ",
+    "tooltip": false,
+    "on-click": "wlogout -b 4",
+    "on-click-right": "swaync-client -t",
+  },
+}
