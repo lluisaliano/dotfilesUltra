@@ -9,6 +9,7 @@
 {
   "agent_servers": {
     "codex": {
+      "type": "registry",
       "favorite_models": [
         "gpt-5.1-codex-max/medium",
         "gpt-5.1-codex-max/high"
@@ -103,6 +104,7 @@
     "show_branch_icon": true,
   },
   "debugger": {
+    "dock": "right",
     "button": true,
   },
   "search": {

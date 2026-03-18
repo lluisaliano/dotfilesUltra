@@ -467,6 +467,7 @@ window-rule {
     match app-id=r#"firefox$"# title="^Picture-in-Picture$"
     match title="Zed — Settings"
     match title="Rename .*"
+    match title="File Operation Progress"
     open-floating true
 }
 

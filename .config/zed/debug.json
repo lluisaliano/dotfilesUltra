@@ -22,6 +22,8 @@
       "cwd": "$ZED_WORKTREE_ROOT"
     },
     "program": "$ZED_WORKTREE_ROOT/main",
+    "args": ["lolito.txt"],
+    "cwd": "$ZED_WORKTREE_ROOT",
     "request": "launch",
     "adapter": "CodeLLDB",
     // Enters forked process

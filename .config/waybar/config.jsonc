@@ -16,7 +16,7 @@
   "layer": "top", // Waybar at top layer
   // "position": "bottom", // Waybar position (top|bottom|left|right)
   "position": "top",
-  "height": 30, // Waybar height (to be removed for auto height)
+  "height": 40, // Waybar height (to be removed for auto height)
   // "width": 1280, // Waybar width
   "reload_style_on_change": true,
   "spacing": 4, // Gaps between modules (4px)
@@ -34,6 +34,7 @@
     "clock"
   ],
   "modules-right": [
+    "group/performance",
     "systemd-failed-units",
     //"idle_inhibitor",
     "backlight",
@@ -52,10 +53,20 @@
   },
   "systemd-failed-units": {
     "hide-on-ok": false, // Do not hide if there is zero failed units
-    "format": "{nr_failed} ✗",
-    "format-ok": "✓",
+    "format": "- {nr_failed} ✗ -",
+    "format-ok": "- ✓ -",
     "system": true, // Monitor failed systemwide units.
     "user": true // Ignore failed user units.
+  },
+  "group/performance": {
+    "orientation": "horizontal",
+    "modules": [
+      "power-profiles-daemon",
+      "gamemode"
+    ],
+    "drawer": {
+      "transition-duration": 0.3,
+    },
   },
   "group/hardware": {
     "orientation": "horizontal",
@@ -217,8 +228,10 @@
     ],
   },
   "battery": {
+    "adapter": "", // Disable adapter so it does not shouw pluged when loading
+    "bat": "BAT0",
     "states": {
-      // "good": 95,
+      "good": 95,
       "warning": 30,
       "critical": 15,
     },
@@ -236,19 +249,29 @@
       " ",
       " "
     ],
+    "tooltip-format": "Power: {power}\nHealth: {health}%"
   },
-  "battery#bat2": {
-    "bat": "BAT2",
+  "gamemode": {
+    "format": "Games: {glyph} {count}",
+    "format-alt": "{glyph} {count}",
+    "glyph": "󰊗 ",
+    "hide-not-running": true,
+    "use-icon": false,
+    "icon-name": "input-gaming-symbolic",
+    "icon-spacing": 4,
+    "icon-size": 20,
+    "tooltip": true,
+    "tooltip-format": "Games running: {count}"
   },
   "power-profiles-daemon": {
     "format": "{icon}",
-    "tooltip-format": "Power profile: {profile}\nDriver: {driver}",
+    "tooltip-format": "Power profile: {profile}",
     "tooltip": true,
     "format-icons": {
       "default": "",
       "performance": "",
       "balanced": "",
-      "power-saver": "",
+      "power-saver": "󰌪",
     },
   },
   "pulseaudio": {
