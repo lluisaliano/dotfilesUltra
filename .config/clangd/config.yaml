@@ -1,0 +1,29 @@
+Index:
+  StandardLibrary: true
+Diagnostics:
+  UnusedIncludes: Strict
+  ClangTidy:
+    Add: bugprone*, modernize* 
+    Remove: -modernize-use-trailing-return-type
+Completion:
+  AllScopes: No
+  ArgumentLists: Delimiters
+  HeaderInsertion: IWYU
+  CodePatterns: All
+  MacroFilter: ExactPrefix
+InlayHints:
+  BlockEnd: false
+  Designators: true
+  Enabled: true
+  ParameterNames: true
+  DeducedTypes: true
+  DefaultArguments: false
+  TypeNameLimit: 24
+Hover:
+  ShowAKA: false
+  MacroContentsLimit: 2048
+SemanticTokens:
+  DisabledKinds: []
+  DisabledModifiers: []
+Documentation:
+  CommentFormat: Doxygen
