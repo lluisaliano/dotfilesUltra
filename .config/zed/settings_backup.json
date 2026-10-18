@@ -7,8 +7,28 @@
 // custom settings, run `zed: open default settings` from the
 // command palette
 {
+  "cli_default_open_behavior": "new_window",
+  "outline_panel": {
+    "dock": "left"
+  },
+  "collaboration_panel": {
+    "dock": "left"
+  },
+  "git_panel": {
+    "dock": "left"
+  },
   "agent_servers": {
+    "opencode": {
+      "type": "registry"
+    },
+    "codex-acp": {
+      "default_config_options": {
+        "fast-mode": false
+      },
+      "type": "registry"
+    },
     "codex": {
+      "type": "registry",
       "favorite_models": [
         "gpt-5.1-codex-max/medium",
         "gpt-5.1-codex-max/high"
@@ -35,11 +55,15 @@
   },
   "colorize_brackets": true,
   "scrollbar": {
-    "git_diff": true,
+    "cursors": false,
+    "diagnostics": "all",
+    "selected_symbol": true,
+    "selected_text": true,
+    "git_diff": false,
     "show": "auto",
   },
   "edit_predictions": {
-    "provider": "copilot",
+    "provider": "zed",
     "disabled_globs": [
       "**/.env*",
       "**/*.pem",
@@ -52,12 +76,6 @@
   },
   "use_system_window_tabs": false,
   "context_servers": {
-    "mcp-server-github": {
-      "enabled": false,
-      "settings": {
-        "github_personal_access_token": "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",
-      },
-    },
     "mcp-server-context7": {
       "enabled": false,
       "settings": {
@@ -79,6 +97,7 @@
       "settings": {},
     },
     "better-auth": {
+      "settings": {},
       "enabled": false,
       "url": "https://mcp.chonkie.ai/better-auth/better-auth-builder/mcp",
     },
@@ -104,6 +123,7 @@
     "show_branch_icon": true,
   },
   "debugger": {
+    "dock": "right",
     "button": true,
   },
   "search": {
@@ -118,6 +138,10 @@
     "button": true,
   },
   "terminal": {
+    "default_width": 900.0,
+    "font_size": 18.0,
+    "shell": "system",
+    "dock": "right",
     "button": true,
   },
   "status_bar": {
@@ -141,6 +165,7 @@
   },
   "relative_line_numbers": "enabled",
   "project_panel": {
+    "dock": "left",
     "button": true,
     "entry_spacing": "standard",
     "indent_size": 28.0,
@@ -174,8 +199,21 @@
   "ui_font_family": "0xProto Nerd Font",
   "buffer_line_height": "standard",
   "buffer_font_weight": 400.0,
-  "icon_theme": "Catppuccin Mocha",
+  "icon_theme": {
+    "mode": "light",
+    "light": "Catppuccin Mocha",
+    "dark": "Catppuccin Mocha"
+  },
   "languages": {
+    "CMake": {
+      "show_edit_predictions": false
+    },
+    "JSON": {
+      "language_servers": [
+        "!biome",
+        "!color-lsp"
+      ]
+    },
     "C++": {
       "inlay_hints": {
         "show_background": true,
@@ -258,10 +296,14 @@
   },
   "show_edit_predictions": true,
   "agent": {
+    "sidebar_side": "right",
+    "dock": "right",
     "enable_feedback": false,
     "default_model": {
-      "provider": "copilot_chat",
-      "model": "gpt-5-mini",
+      "effort": "medium",
+      "enable_thinking": true,
+      "provider": "zed.dev",
+      "model": "gpt-5.4",
     },
   },
   "telemetry": {
@@ -271,15 +313,15 @@
   "cursor_shape": "bar",
   "cursor_blink": true,
   "current_line_highlight": "none",
-  "ui_font_size": 18.0,
+  "ui_font_size": 20.0,
   "buffer_font_features": {
     "calt": true,
   }, // Font Ligatures
-  "buffer_font_size": 17.0,
+  "buffer_font_size": 18.0,
   "theme": {
-    "mode": "system",
+    "mode": "dark",
     "light": "Vercel Dark",
-    "dark": "Zedokai (Filter Spectrum)",
+    "dark": "Warp One Dark",
   },
   "buffer_font_family": "0xProto Nerd Font Mono",
   "show_completion_documentation": true,

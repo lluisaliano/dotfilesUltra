@@ -112,6 +112,7 @@
       ".*Alacritty": "-  Alacritty  ",
       ".*ghostty": "-  Ghostty  ",
       ".*(Evince|Papers)": "-  Document Viewer 󰈙 ",
+      ".*Celluloid": "- Celluloid  ",
       ".*Notion": "-  Notion  ",
       ".*Lotion": "-  Lotion  ",
       ".*thunar": "-  Thunar  ",
@@ -233,7 +234,7 @@
     "states": {
       "good": 95,
       "warning": 30,
-      "critical": 15,
+      "critical": 10,
     },
     "format": "{capacity}% {icon}",
     "format-full": "{capacity}% {icon}",

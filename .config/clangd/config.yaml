@@ -6,7 +6,7 @@ Diagnostics:
     Add: bugprone*, modernize* 
     Remove: -modernize-use-trailing-return-type
 Completion:
-  AllScopes: No
+  AllScopes: Yes
   ArgumentLists: Delimiters
   HeaderInsertion: IWYU
   CodePatterns: All

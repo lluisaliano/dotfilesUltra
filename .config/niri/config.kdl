@@ -541,7 +541,7 @@ binds {
     // --
     Mod+Return hotkey-overlay-title="Open a Terminal: foot" { spawn "footclient"; }
 //    Mod+Return hotkey-overlay-title="Open a Terminal: ghostty" { spawn "ghostty"; }
-    Mod+Alt+L hotkey-overlay-title="Lock the Screen: hyprlock" { spawn "hyprlock"; }
+    // Mod+Alt+L hotkey-overlay-title="Lock the Screen: hyprlock" { spawn "hyprlock"; }
     Mod+E { spawn "helium-browser"; }
     Mod+D {spawn "zeditor"; }
     Mod+A {spawn "thunar"; }
@@ -549,8 +549,8 @@ binds {
     Mod+P { spawn "hyprpicker" "-a"; }
     // VICINAE
     Mod+M repeat=false { spawn "vicinae" "toggle"; }
-    Mod+C repeat=false { spawn "vicinae" "vicinae://extensions/vicinae/clipboard/history"; }
-    Mod+Shift+C repeat=false {spawn "vicinae" "vicinae://extensions/vicinae/clipboard/clear"; }
+    Mod+C repeat=false { spawn "vicinae" "vicinae://launch/clipboard/history"; }
+    Mod+Shift+C repeat=false {spawn "vicinae" "vicinae://launch/clipboard/clear-history"; }
     Mod+Z {spawn "vicinae" "vicinae://extensions/sovereign/awww-switcher/wpgrid"; }
     // The way to do in on bottom also works but we can use an extension
     //Mod+P repeat=false {spawn-sh "awww img -t grow $(find ~/Pictures/Backgrounds -type f | vicinae dmenu -p 'Pick a wallpaper...')"; }

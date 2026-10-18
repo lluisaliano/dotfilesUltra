@@ -54,10 +54,10 @@
   {
     "label": "Compile and Run CMake",
     "command": "cmake --build build && ./build/main",
-    "use_new_terminal": true,
-    "show_summary": true,
+    "use_new_terminal": false,
+    "show_summary": false,
     "reveal": "always",
-    "show_command": true,
+    "show_command": false,
     // "tags": ["build_and_run"]
   },
   {

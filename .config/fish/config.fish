@@ -18,10 +18,10 @@ end
 # pnpm end
 
 #Fastfech with image
-fastfetch --logo /home/lluis/Pictures/Backgrounds/rocket.jpg --logo-type sixel --logo-width 30 --logo-height 7
+#fastfetch --logo /home/lluis/Pictures/Backgrounds/rocket.jpg --logo-type sixel --logo-width 30 --logo-height 7
 
 # uv
 fish_add_path "/home/lluis/.local/bin"
 
 #Enable vim commands:
-set -g fish_key_bindings fish_vi_key_bindings
+ set -g fish_key_bindings fish_vi_key_bindings

@@ -118,15 +118,21 @@
     }
   },
   {
-    "context": "vim_mode == normal",
-      "bindings": {
-      "\"\"": "vim::ToggleRegistersView"
+    "context": "(vim_mode == normal)",
+    "bindings": {
+      "alt-;": "vim::ToggleRegistersView"
     }
   },
   {
-    "context": "vim_mode == normal",
+    "context": "RunModal",
     "bindings": {
-      "\"": "vim::ToggleRegistersView"
+      "alt-tab": "pane::ActivateNextItem"
+    }
+  },
+  {
+    "context": "Workspace",
+    "bindings": {
+      "alt-tab": "tab_switcher::Toggle"
     }
   }
 ]

@@ -7,13 +7,34 @@
 // custom settings, run `zed: open default settings` from the
 // command palette
 {
+  "cli_default_open_behavior": "new_window",
+  "outline_panel": {
+    "dock": "left"
+  },
+  "collaboration_panel": {
+    "dock": "left"
+  },
+  "git_panel": {
+    "dock": "left"
+  },
   "agent_servers": {
+    "claude-acp": {
+      "type": "registry"
+    },
+    "opencode": {
+      "type": "registry"
+    },
+    "codex-acp": {
+      "default_config_options": {
+        "reasoning_effort": "medium",
+        "model": "gpt-5.6-sol",
+        "mode": "agent-full-access",
+        "fast-mode": false
+      },
+      "type": "registry"
+    },
     "codex": {
       "type": "registry",
-      "favorite_models": [
-        "gpt-5.1-codex-max/medium",
-        "gpt-5.1-codex-max/high"
-      ],
       "default_config_options": {},
       "favorite_config_option_values": {},
     },
@@ -95,13 +116,13 @@
     "show": true,
   },
   "title_bar": {
+    "show_branch_status_icon": true,
     "show_menus": false,
     "show_sign_in": true,
     "show_user_picture": true,
     "show_onboarding_banner": true,
     "show_project_items": true,
     "show_branch_name": true,
-    "show_branch_icon": true,
   },
   "debugger": {
     "dock": "right",
@@ -119,6 +140,10 @@
     "button": true,
   },
   "terminal": {
+    "default_width": 900.0,
+    "font_size": 18.0,
+    "shell": "system",
+    "dock": "right",
     "button": true,
   },
   "status_bar": {
@@ -142,6 +167,7 @@
   },
   "relative_line_numbers": "enabled",
   "project_panel": {
+    "dock": "left",
     "button": true,
     "entry_spacing": "standard",
     "indent_size": 28.0,
@@ -165,18 +191,42 @@
         {
           "paths": [
             "/home/lluis"
-          ],
-        },
-      ],
+          ]
+        }
+      ]
     },
+    {
+      "host": "192.168.1.57",
+      "username": "macneojana",
+      "args": [],
+      "projects": [
+        {
+          "paths": [
+            "/Users/macneojana"
+          ]
+        },
+        {
+          "paths": [
+            "/Users/macneojana/Documents/NutritionApp"
+          ]
+        }
+      ]
+    }
   ],
   "ui_font_weight": 400.0,
   "vim_mode": true,
   "ui_font_family": "0xProto Nerd Font",
   "buffer_line_height": "standard",
   "buffer_font_weight": 400.0,
-  "icon_theme": "Catppuccin Mocha",
+  "icon_theme": {
+    "mode": "light",
+    "light": "Catppuccin Mocha",
+    "dark": "Catppuccin Mocha"
+  },
   "languages": {
+    "CMake": {
+      "show_edit_predictions": true
+    },
     "JSON": {
       "language_servers": [
         "!biome",
@@ -249,6 +299,21 @@
     },
   },
   "lsp": {
+    "vtsls": {
+      "settings": {
+        "typescript": {
+          "updateImportsOnFileMove": {
+            "enabled": "always"
+          }
+        },
+        "javascript": {
+          "updateImportsOnFileMove": {
+            "enabled": "always"
+          }
+        }
+      },
+      "enable_lsp_tasks": true
+    },
     "biome": {
       "settings": {},
     },
@@ -265,10 +330,17 @@
   },
   "show_edit_predictions": true,
   "agent": {
+    "auto_compact": {
+      "enabled": false
+    },
+    "sidebar_side": "right",
+    "dock": "right",
     "enable_feedback": false,
     "default_model": {
-      "provider": "copilot_chat",
-      "model": "gpt-5-mini",
+      "effort": "medium",
+      "enable_thinking": true,
+      "provider": "zed.dev",
+      "model": "gpt-5.4",
     },
   },
   "telemetry": {
@@ -284,9 +356,9 @@
   }, // Font Ligatures
   "buffer_font_size": 18.0,
   "theme": {
-    "mode": "system",
+    "mode": "dark",
     "light": "Vercel Dark",
-    "dark": "Le Blackque purple",
+    "dark": "Warp One Dark",
   },
   "buffer_font_family": "0xProto Nerd Font Mono",
   "show_completion_documentation": true,
