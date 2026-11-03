@@ -60,6 +60,12 @@ export default class Sidebar {
       for (;;) {
         const command = await nextCommand();
         if (command === "move_space") this.moveActive();
+        // keys.json "space-groups.move_space_up" / "_down": swap the active space with its neighbor.
+        else if (command === "move_space_up") this.shiftActive(-1);
+        else if (command === "move_space_down") this.shiftActive(1);
+        // keys.json "space-groups.move_tab_left" / "_right": swap the active tab with its neighbor.
+        else if (command === "move_tab_left") this.shiftTab(-1);
+        else if (command === "move_tab_right") this.shiftTab(1);
         // keys.json "space-groups.new_space": the + menu, centered as a dialog.
         else if (command === "new_space") openOverlay({ mod: MOD, kind: "dialog", width: 260, props: { role: "menu", add: true, dialog: true, space: spaces().find((s) => s.active)?.id } });
       }
@@ -275,6 +281,31 @@ export default class Sidebar {
       return;
     }
     openOverlay({ mod: MOD, kind: "dialog", width: 380, props: { role: "move", space: active.id } });
+  }
+
+  // Swaps the active space with the one above (by -1) or below (by 1) among the
+  // spaces of its machine and group, as the sidebar lists them.
+  shiftActive(by) {
+    const all = spaces();
+    const at = all.findIndex((s) => s.active);
+    if (at < 0) return;
+    const active = all[at];
+    const state = load();
+    const group = (s) => groupOf(state, s)?.id ?? null;
+    const peer = (s) => (s.machine ?? null) === (active.machine ?? null) && group(s) === group(active);
+    let to = at + by;
+    while (to >= 0 && to < all.length && !peer(all[to])) to += by;
+    if (to < 0 || to >= all.length) return;
+    run("space.move", { id: active.id, index: to + 1 });
+  }
+
+  // Swaps the active space's active tab with the one left (by -1) or right (by 1) of it.
+  shiftTab(by) {
+    const tabs = spaces().find((s) => s.active)?.tabs ?? [];
+    const at = tabs.findIndex((c) => c.active);
+    const to = at + by;
+    if (at < 0 || to < 0 || to >= tabs.length) return;
+    run("tab.move", { id: tabs[at].id, index: to + 1 });
   }
 
   // Spaces in order, each worktree space moved under its main checkout's.
