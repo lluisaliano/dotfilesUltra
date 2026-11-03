@@ -34,8 +34,8 @@
     "clock"
   ],
   "modules-right": [
+    "custom/cava",
     "group/performance",
-    "systemd-failed-units",
     //"idle_inhibitor",
     "backlight",
     "pulseaudio",
@@ -53,8 +53,8 @@
   },
   "systemd-failed-units": {
     "hide-on-ok": false, // Do not hide if there is zero failed units
-    "format": "- {nr_failed} ✗ -",
-    "format-ok": "- ✓ -",
+    "format": "{nr_failed} ✗",
+    "format-ok": "✓",
     "system": true, // Monitor failed systemwide units.
     "user": true // Ignore failed user units.
   },
@@ -74,7 +74,8 @@
       "cpu",
       "memory",
       "disk",
-      "temperature"
+      "temperature",
+      "systemd-failed-units"
     ],
     // Make the group hide and appear on hover
     "drawer": {
@@ -134,9 +135,12 @@
     },
   },
   "custom/cava": {
-    "format": " ",
+    "exec": "python3 -u $HOME/.config/waybar/scripts/cava.py",
+    "return-type": "json",
+    "format": "{}",
+    "escape": false,
     "tooltip": false,
-    "on-click": "kitty -e cava",
+    "restart-interval": 3,
   },
   "custom/waypaper": {
     "format": " ",
