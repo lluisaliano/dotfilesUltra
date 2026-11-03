@@ -1,0 +1,11 @@
+{
+  "zoom": 1.3,
+  "sounds": {
+    "enabled": true
+  },
+  "minimum_contrast": 1,
+  "font": "Mononoki Nerd Font Mono",
+  "ui_font": "Mononoki Nerd Font Mono",
+  "theme": "warp-one-dark",
+  "appearance": "dark"
+}

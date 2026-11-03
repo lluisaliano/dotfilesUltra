@@ -1,0 +1,9 @@
+{
+  "place": "none",
+  "title": "Mod Manager",
+  "overlay": {
+    "kind": "dialog",
+    "width": 0.6,
+    "height": 0.75
+  }
+}

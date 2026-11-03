@@ -1,0 +1,11 @@
+herdr-zed
+Copyright 2026 Sudhanva Narayana
+
+This project contains modified copies of files from the Herdr app,
+licensed under the Apache License, Version 2.0:
+
+- mods/zed-tabs/         from the Herdr "tabs" mod (version 0.1.12).
+  Change: a "Zed" button is added after the panel buttons.
+  zed.js and zed.svg are new files.
+- layouts/main-zed.json  from the Herdr "main" layout (version 0.1.12).
+  Change: the tab bar block uses "zed-tabs" in place of "tabs".

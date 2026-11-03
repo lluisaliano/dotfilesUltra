@@ -1,0 +1,9 @@
+{
+  "place": "none",
+  "title": "Quota settings",
+  "overlay": {
+    "kind": "dialog",
+    "width": 760,
+    "height": 520
+  }
+}

@@ -1,0 +1,73 @@
+# Runtime state Herdr writes (personal, or rebuilt on its own)
+*.sock
+shared.json
+shared.json.corrupt-*
+shared.json.tmp.*
+view.json
+window.json
+windows.json
+seen.json
+installed.json
+update-notes.json
+update-notes-cache.md
+update-notes-media/
+telemetry/
+data/
+github-cache.json
+linear-cache.json
+community-mods-*.json
+layouts/.state/
+*.error
+
+# Local backups
+backups/
+*.backup-*
+*.reset-*
+*.old-*
+
+# Rewritten by Herdr on every start
+AGENTS.md
+herdr.d.ts
+gpui-kit.d.ts
+frame/
+/icons/
+**/jsconfig.json
+**/gpui-kit.d.ts
+
+# Herdr's shipped layouts and mods (restored on every start)
+layouts/main.json
+layouts/terminals.json
+layouts/win98.json
+layouts/win98.svg
+mods/agents/
+mods/changes/
+mods/confirm/
+mods/files/
+mods/help/
+mods/machine-add/
+mods/menu/
+mods/new-menu/
+mods/pane/
+mods/peek/
+mods/picker/
+mods/prompt/
+mods/spaces/
+mods/tabs/
+mods/terminals-bar/
+mods/terminals-pane/
+mods/toast/
+mods/win98/
+mods/workspace-chrome/
+mods/workspace-status/
+mods/worktree/
+
+# Tool caches
+node_modules/
+__pycache__/
+.ruff_cache/
+
+# Downloaded owner pictures (space-groups)
+**/.cache/
+
+# Local icon pack, not in the repo
+mods/zed-file-icons/icons/
