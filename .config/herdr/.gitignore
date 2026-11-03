@@ -1,0 +1,7 @@
+# Runtime state Herdr writes: only config.toml is versioned
+*.log
+session.json
+session-snapshots/
+*.sock
+*.sock.*
+.plugins.lock

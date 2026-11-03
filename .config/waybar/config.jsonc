@@ -121,6 +121,7 @@
       ".*Bitwarden": "-  Bitwarden  ",
       ".*feishin.*": "-  Feishin  ",
       ".*foot.*": "- Foot  ",
+      ".*herdr-app.*": "- Herdr  ",
       ".*nextcloud.*": "- Nextcloud  ",
       ".*org.pulseaudio.pavucontrol.*": "- Volume  ",
       ".*dev.zed.Zed.*": "- Zed  ",

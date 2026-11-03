@@ -188,6 +188,7 @@ recent-windows {
 // This line starts waybar, a commonly used bar for Wayland compositors.
 spawn-at-startup "/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1"
 spawn-at-startup "waybar"
+// spawn-at-startup "qs"
 spawn-at-startup "swaync"
 spawn-at-startup "gammastep-indicator"
 // Not needed as caffeine is started on /etc/xdg/autostart/

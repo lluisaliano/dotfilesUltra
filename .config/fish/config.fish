@@ -25,3 +25,7 @@ fish_add_path "/home/lluis/.local/bin"
 
 #Enable vim commands:
  set -g fish_key_bindings fish_vi_key_bindings
+
+# Editor externo (Ctrl+G en Claude Code abre el prompt en Zed)
+set -gx EDITOR "zeditor --wait"
+set -gx VISUAL "zeditor --wait"

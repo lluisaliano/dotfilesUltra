@@ -61,7 +61,7 @@
     "diagnostics": "all",
     "selected_symbol": true,
     "selected_text": true,
-    "git_diff": false,
+    "git_diff": true,
     "show": "auto",
   },
   "edit_predictions": {
@@ -167,12 +167,12 @@
   },
   "relative_line_numbers": "enabled",
   "project_panel": {
+    "folder_indicator": "chevron",
     "dock": "left",
     "button": true,
     "entry_spacing": "standard",
     "indent_size": 28.0,
     "git_status": true,
-    "folder_icons": false,
     "file_icons": true,
     "hide_gitignore": false,
     "default_width": 230.0,
@@ -330,10 +330,12 @@
   },
   "show_edit_predictions": true,
   "agent": {
+    "threads_sidebar": {
+      "position": "right"
+    },
     "auto_compact": {
       "enabled": false
     },
-    "sidebar_side": "right",
     "dock": "right",
     "enable_feedback": false,
     "default_model": {
@@ -350,7 +352,7 @@
   "cursor_shape": "bar",
   "cursor_blink": true,
   "current_line_highlight": "none",
-  "ui_font_size": 20.0,
+  "ui_font_size": 18.0,
   "buffer_font_features": {
     "calt": true,
   }, // Font Ligatures
