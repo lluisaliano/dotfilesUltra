@@ -1,6 +1,13 @@
-import { View, div, svg } from "gpui-kit";
+import { View, div, svg, image } from "gpui-kit";
 import { h_flex, v_flex } from "gpui-base";
 import { theme, spaces, knownAgents, run, props, closeOverlay } from "herdr";
+
+// The agents alt-a offers, in order: the first is selected when it opens.
+// tint: a one-color glyph (drawn in color, else the text color); else a full-color picture.
+const CHOICES = [
+  { key: "codex", label: "Codex", icon: "icons/codex.svg", tint: false },
+  { key: "claude", label: "Claude", icon: "icons/claude.svg", tint: true, color: "#d97757" },
+];
 
 export default class AgentLauncher extends View {
   init(_props, cx) {
@@ -22,7 +29,7 @@ export default class AgentLauncher extends View {
   }
 
   choices() {
-    return ["claude", "codex"].map((key) =>
+    return CHOICES.map(({ key }) =>
       this.agents.find((agent) => agent.key === key),
     );
   }
@@ -99,14 +106,16 @@ export default class AgentLauncher extends View {
             .hover((style) => style.bg(t.hover))
             .on_click(() => this.launch(index))
             .child(
-              svg(index === 0 ? "icons/claude.svg" : "icons/codex.svg").size(
-                18,
-              ),
+              CHOICES[index].tint
+                ? svg(CHOICES[index].icon)
+                    .size(18)
+                    .when(Boolean(CHOICES[index].color), (el) => el.text_color(CHOICES[index].color))
+                : image(CHOICES[index].icon).size(18),
             )
             .child(
               div()
                 .flex_1()
-                .child(index === 0 ? "Claude" : "Codex"),
+                .child(CHOICES[index].label),
             )
             .child(
               div()
