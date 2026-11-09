@@ -68,6 +68,12 @@ button:hover {
     background-color: transparent;
 }
 
+/* Fill GTK's existing minimum width so Niri's label stays centered. */
+#workspaces button > box,
+#workspaces button > box > label {
+    min-width: inherit;
+}
+
 #workspaces button:hover {
     background:rgba(255, 255, 255, 0.1);
     border-radius: 8px;
